@@ -4,7 +4,6 @@
   "description": "Esta es mi primera aplicación real de Node",
   "main": "app.js",
   "scripts": {
-    
     "build": "rimraf ./dist && tsc",
     "dev": "nodemon",
     "start": "npm run build && node dist/app.js",
