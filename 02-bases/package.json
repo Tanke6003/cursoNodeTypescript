@@ -4,11 +4,12 @@
   "description": "Esta es mi primera aplicación real de Node",
   "main": "app.js",
   "scripts": {
-    "build": "rimraf ./dist && tsc",
+    "build": "npm run test && rimraf ./dist && tsc --removeComments ",
     "dev": "nodemon",
-    "start": "npm run build && node dist/app.js",
+    "start": "node dist/app.js",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:watchAll": "jest --watchAll",
     "test:coverage": "jest --coverage"
   },
   "author": "Fernando Herrera",
