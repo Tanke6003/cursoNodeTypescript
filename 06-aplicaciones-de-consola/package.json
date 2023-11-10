@@ -10,6 +10,7 @@
     "start": "npm run build && node dist/app.js",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:watchAll": "jest --watchAll",
     "test:coverage": "jest --coverage"
   },
   "keywords": [],
