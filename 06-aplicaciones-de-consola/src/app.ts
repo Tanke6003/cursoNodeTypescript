@@ -1,5 +1,14 @@
-console.log(process.argv)
+import { argv } from "./config/plugins/args.plugin";
+import { ServerApp } from "./presentation/server";
+//console.log(process.argv)
 
-const [exec, program, ...args] = process.argv;
+//console.log(argv)
 
-console.log(args);
+(async() =>{
+    await main();
+})();
+
+async function main(){
+    const {b:base,l:limit,s:requiredShow,n:fileName,d:destinationPath} = argv
+    ServerApp.run({base,limit,requiredShow,fileName,destinationPath});
+}
