@@ -17,6 +17,5 @@ export class ServerApp{
         const wasCreated = new SaveFile().execute({fileContent:table,destinationPath:destinationPath,fileName:fileName});
         if(requiredShow) console.log(table);
         wasCreated ? console.log('File Created!') : console.error('File not created!');
-
     }
 }
