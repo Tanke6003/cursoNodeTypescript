@@ -6,4 +6,4 @@
 **/.DS_Store
 *.DS_Store
 **/logs/
-#de todas las carpetas borra las subcarpetas node_modules ,dist,coverage,outputs,logs,DS_Store
+**.env
