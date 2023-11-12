@@ -14,8 +14,10 @@ describe('domain/use-case/save-file',()=>{
     })
     afterEach(()=>{
         //clean up
+        if(fs.existsSync(customFilePathExcpected))fs.rmSync(options.destinationPath,{recursive:true});
+    })
+    afterAll(()=>{
         if(fs.existsSync('outputs'))fs.rmSync('outputs',{recursive:true});
-        if(fs.existsSync(customFilePathExcpected))fs.rmSync(customFilePathExcpected,{recursive:true});
     })
     test('Should save file with default values',()=>{
 
