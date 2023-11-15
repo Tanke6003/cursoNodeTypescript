@@ -8,3 +8,7 @@
 #**/logs/
 **.env
 08-NOC/mongo/
+08-NOC/postgres/
+08-NOC/pgadmin/
+08-NOC/postgres-test/
+08-NOC/mongo-test/

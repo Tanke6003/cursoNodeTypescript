@@ -24,9 +24,15 @@ export class LogEntity {
         this.createdAt = options.createdAt ?? new Date();
         this.origin = options.origin;
     }
-    static fromJson = (json:string): LogEntity => {
-        const options:LogEntityOptions = JSON.parse(json);
-        const log = new LogEntity(options);
+    static fromJson = (json:string= '{}'): LogEntity => {
+        json = (json === '')? '{}':json;
+        const {message,level,createdAt,origin} = JSON.parse(json);
+        const log = new LogEntity({level, message, createdAt:new Date(createdAt), origin});
+        return log;
+    }
+    static fromObject = (object:{[key:string]:any}): LogEntity => {
+        const {level, message, createdAt, origin} = object;
+        const log = new LogEntity({level, message, createdAt, origin});
         return log;
     }
 }
